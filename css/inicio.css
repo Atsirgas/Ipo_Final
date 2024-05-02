@@ -1,0 +1,87 @@
+/*Section*/
+section {
+    display: flex;
+    width: 99vw;
+    height: 95vh;
+    position: relative;
+  }
+
+  section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: width .5s ease, opacity .5s ease, filter .5s ease; 
+  }
+
+  section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+  section img:nth-of-type(1) + h1,
+  section img:nth-of-type(2) + h1,
+  section img:nth-of-type(3) + h1,
+  section img:nth-of-type(4) + h1 {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: opacity .5s ease;
+    opacity: 0;
+  }
+
+  section img:nth-of-type(1) + h1 { left: 16%; }
+  section img:nth-of-type(2) + h1 { left: 38%; }
+  section img:nth-of-type(3) + h1 { left: 60%; }
+  section img:nth-of-type(4) + h1 { left: 83%; }
+
+  section img:nth-of-type(1):hover + h1,
+  section img:nth-of-type(2):hover + h1,
+  section img:nth-of-type(3):hover + h1,
+  section img:nth-of-type(4):hover + h1 {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 617px) {
+    section img:nth-of-type(1) + h1,
+    section img:nth-of-type(2) + h1,
+    section img:nth-of-type(3) + h1,
+    section img:nth-of-type(4) + h1 {
+      font-size: 30px;
+    }
+
+    section img:nth-of-type(1) + h1 { left: 40%; }
+    section img:nth-of-type(2) + h1 { left: 50%; }
+    section img:nth-of-type(3) + h1 { left: 50%; }
+    section img:nth-of-type(4) + h1 { left: 60%; }
+  }
+/*Section*/
+
+/*Carrousel*/
+.slider {
+  position: relative;
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide:first-child {
+  opacity: 1;
+}
+/*Carrousel*/
