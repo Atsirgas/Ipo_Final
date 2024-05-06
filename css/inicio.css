@@ -63,6 +63,28 @@ section {
   }
 /*Section*/
 
+.br {
+  flex: 1;
+  color: #fff;
+	padding: 30px;
+
+}
+
+.h1 {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h4 {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 /*Carrousel*/
 .slider {
   position: relative;
@@ -70,7 +92,6 @@ section {
   height: 500px;
   overflow: hidden;
   margin: 0 auto;
-  
 }
 
 .slide {
@@ -84,4 +105,28 @@ section {
 .slide:first-child {
   opacity: 1;
 }
+
+#prev, #next {
+  position: absolute;
+  top: 130%;
+  transform: translateY(-50%);
+  background: none; 
+  border: none;
+  padding: 0;
+  transform: scale(.2);
+}
+
+#prev {
+  left: 5%;
+}
+
+#next {
+  right: 5%;
+}
+
+#prev img, #next img {
+  filter: invert(100%) sepia(0%) saturate(0%) brightness(100%); /*booooof*/
+}
+
+
 /*Carrousel*/
