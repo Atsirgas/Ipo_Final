@@ -16,8 +16,8 @@
   <h1 onclick="redirectToGallery('primavera')">Primavera</h1>
   <img src="./img/veranoInici.jpg" alt="Verano" onclick="redirectToGallery('verano')">
   <h1 onclick="redirectToGallery('verano')">Verano</h1>
-  <img src="./img/otonoInicio.jpg" alt="Otoño" onclick="redirectToGallery('otono')">
-  <h1 onclick="redirectToGallery('otono')">Otoño</h1>
+  <img src="./img/otonoInicio.jpg" alt="Otoño" onclick="redirectToGallery('otoño')">
+  <h1 onclick="redirectToGallery('otoño')">Otoño</h1>
   <img src="./img/invernoInicio.jpg" alt="Invierno" onclick="redirectToGallery('invierno')">
   <h1 onclick="redirectToGallery('invierno')">Invierno</h1>
 </section>
@@ -25,7 +25,9 @@
 
 <div class="br"></div>
 
-<div class="h1"><h1>Top Images:</h1></div>
+<div class="h1">
+  <h1>Top Images:</h1>
+</div>
 <h4>Las mejores imagenes de la semana</h4>
 
 <!--Carrousel-->
@@ -37,7 +39,7 @@
 </div>
 <button id="next"><img src="./img/siguiente.png" alt="Siguiente"></button>
 
-<script src="js/carrousel.js"></script>        
+<script src="js/carrousel.js"></script>
 <!--Carrousel-->
 
 <!--Carrousel rotate-->
@@ -62,7 +64,7 @@
 
 <script>
   function redirectToGallery(season) {
-      window.location.href = 'gallery.html?season=' + season;
+    window.location.href = 'gallery.html?season=' + season;
   }
 </script>
 
