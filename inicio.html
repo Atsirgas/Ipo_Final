@@ -12,14 +12,14 @@
 
 <!--Section-->
 <section>
-  <img src="./img/primaveraInici.jpg">
-  <h1>Primavera</h1>
-  <img src="./img/veranoInici.jpg">
-  <h1>Verano</h1>
-  <img src="./img/otonoInicio.jpg">
-  <h1>Otoño</h1>
-  <img src="./img/invernoInicio.jpg">
-  <h1>Invierno</h1>
+  <img src="./img/primaveraInici.jpg" alt="Primavera" onclick="redirectToGallery('primavera')">
+  <h1 onclick="redirectToGallery('primavera')">Primavera</h1>
+  <img src="./img/veranoInici.jpg" alt="Verano" onclick="redirectToGallery('verano')">
+  <h1 onclick="redirectToGallery('verano')">Verano</h1>
+  <img src="./img/otonoInicio.jpg" alt="Otoño" onclick="redirectToGallery('otono')">
+  <h1 onclick="redirectToGallery('otono')">Otoño</h1>
+  <img src="./img/invernoInicio.jpg" alt="Invierno" onclick="redirectToGallery('invierno')">
+  <h1 onclick="redirectToGallery('invierno')">Invierno</h1>
 </section>
 <!--Section-->
 
@@ -59,5 +59,11 @@
 <!--Carrousel rotate-->
 
 <div class="br"></div>
+
+<script>
+  function redirectToGallery(season) {
+      window.location.href = 'gallery.html?season=' + season;
+  }
+</script>
 
 </html>
