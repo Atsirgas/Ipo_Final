@@ -1,0 +1,37 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.viaje {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.imagen img {
+    width: 300px;
+    height: auto;
+}
+
+.contenido {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Estilos específicos para cada viaje */
+.viaje:nth-child(2) .contenido {
+    text-align: center;
+}
+
+.viaje:nth-child(3) {
+    flex-direction: row-reverse;
+}
+
+hr {
+    margin-top: 40px;
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+}
