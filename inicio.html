@@ -62,10 +62,17 @@
 
 <div class="br"></div>
 
-<script>
+<!-- <script>
   function redirectToGallery(season) {
     window.location.href = 'gallery.html?season=' + season;
   }
+</script> -->
+<script>
+  function redirectToGallery(season) {
+    history.pushState(null, '', '?page=gallery.html&season=' + season);
+    $("#main-content").load('gallery.html', function() {
+      $("#seasonFilter").val(season.toLowerCase()).change();
+    });
+  }
 </script>
-
 </html>

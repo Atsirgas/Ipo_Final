@@ -58,5 +58,5 @@ document.addEventListener('DOMContentLoaded', function () {
     zoneFilter.addEventListener('change', filterCards);
 
     // Muestra inicial
-    filterCards(); // Asegúrate de llamar a filterCards y no displayCards aquí para aplicar los filtros inicialmente
+    filterCards();
 });
