@@ -41,16 +41,21 @@
   <!-- Script load -->
   <script>
     $(document).ready(function(){
-      // Load la pagian inicio.html por defecto
-      $("#main-content").load("inicio.html");  
+        // Load la pagina inicio.html por defecto
+        $("#main-content").load("inicio.html");  
 
-      $(".nav-link").click(function(e) {
-        e.preventDefault();
-        var page = $(this).data("page");  // Get el path de la pagina clicada
-        $("#main-content").load(page);  // Carga la pag clicada
-      });
+        $(".nav-link").click(function(e) {
+            e.preventDefault();
+            var page = $(this).data("page");  // Get el path de la pagina clicada
+            $("#main-content").load(page, function() {
+                if (page === "gallery.html") {
+                    initializeGallery();  // Llama a la función de inicialización
+                }
+            });  // Carga la pag clicada
+        });
     });
-  </script>
+</script>
+
 
 </body>
 </html>

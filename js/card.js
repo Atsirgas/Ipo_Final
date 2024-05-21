@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function initializeGallery() {
     const urlParams = new URLSearchParams(window.location.search);
     const seasonFilterFromUrl = urlParams.get('season');
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { img: "./fotos/inviernoCiudad_foto8.jpg", title: "Ciudad en Invierno", description: "Una foto donde se ve la torre Eiffel nevada durante el invierno en la ciudad de París .", season: "invierno", zone: "ciudad" },
         { img: "./fotos/inviernoCiudad_foto9.jpg", title: "Ciudad en Invierno", description: "Una foto donde se ve la ciudad de Saint-Moritz durante una noche de invierno completamente iluminada .", season: "invierno", zone: "ciudad" },
         { img: "./fotos/otonoMonta_foto10.jpg", title: "Montaña en Otoño", description: "Una vista del parque natural de Somiedo en Asturias cubierto por árboles.", season: "otoño", zone: "montaña" },
-        { img: "./fotos/otonoCiudad_foto11.jpg", title: "Ciudad en Otoño", description: "Una foto de la ciudad de París durante el otoño donde se ve a través de unos árboles la torre Eiffel.", season: "otoño", zone: "ciudad" }  
+        { img: "./fotos/otonoCiudad_foto11.jpg", title: "Ciudad en Otoño", description: "Una foto de la ciudad de París durante el otoño donde se ve a través de unos árboles la torre Eiffel.", season: "otoño", zone: "ciudad" }
     ];
 
     function filterCards() {
@@ -59,4 +59,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Muestra inicial
     filterCards();
-});
+}
