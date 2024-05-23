@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>360° Image Viewer</title>
     <link rel="stylesheet" type="text/css" href="./css/views.css">
 </head>
-<body>
-    <div class="search-container">
-        <input type="text" id="image-search" placeholder="Buscar imágenes...">
-        <button onclick="searchImages()">Buscar</button>
-    </div>
-    <div id="image-results"></div>
-    <div class="br"></div>
 
-    <div class="demo-container">
-        <div class="instructions">
-            <p>Arrastra para mover la imagen.</p>
-            <br>
-            <p>Usa la rueda del ratón para ampliar.</p>
-            <br>
-            <p>Busca nuevas imágenes con el buscador y míralas al pulsarlas.</p>
+<body>
+    <div class="big">
+        <div class="search-container">
+            <input type="text" id="image-search" placeholder="Buscar imágenes...">
+            <button onclick="searchImages()">Buscar</button>
         </div>
+        <div id="image-results"></div>
         <div class="br"></div>
 
-        <div id="demo">
-            <div id="log"></div>
-        </div>
-    </div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
-    <div class="br"></div>
+        <div class="demo-container">
+            <div class="instructions">
+                <p>Arrastra para mover la imagen.</p>
+                <br>
+                <p>Usa la rueda del ratón para ampliar.</p>
+                <br>
+                <p>Busca nuevas imágenes con el buscador y míralas al pulsarlas.</p>
+            </div>
+            <div class="br"></div>
 
+            <div id="demo">
+                <div id="log"></div>
+            </div>
+        </div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+        <div class="br"></div>
+    </div>
     <script src="libs/threejs/build/three.min.js"></script>
     <script src="js/views.js"></script>
 </body>
+
 </html>
