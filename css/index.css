@@ -7,8 +7,20 @@
   
   body {
     background-color: black;
+    z-index: 950;
   }
 
+  .noise {
+    background: url('../img/noise.png');
+    background-size: cover;
+    z-index: 900;
+  }
+
+  .nav-link.active {
+    background-color: #444; /* El color de fondo iluminado */
+    color: #fff; /* El color del texto iluminado */
+  }
+  
   input,
   textarea,
   button,

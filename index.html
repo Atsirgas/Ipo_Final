@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Home</title>
   <meta charset="utf-8">
@@ -8,54 +9,68 @@
   <link rel="stylesheet" href="./css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
+
 <body>
-  <!--Navigation Bar-->
-  <div class="logo">
-    <h1>VIEWS</h1>
-  </div>
-  <span id="close"><img style="width: 25px;" src="http://www.pvhc.net/img5/onbbqnqzkjrtvirmiqnp.png" alt="CLOSE"></span>
-  <span id="menu"><img style="width: 25px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11WXR-a18XfNZknL7S4lu0lLyC4aWZPY4sLd4wNHUNv9So2gd" alt="MENU"></span>
-  <nav>
-    <ul>
-      <li>
-        <!-- Decorative search box -->
-        <input type="text" placeholder="Buscar..." style="padding: 5px; margin: 5px; font-size: 16px;">
-      </li>
-      <li><a href="#" class="nav-link" data-page="inicio.html">INICIO</a></li>
-      <li><a href="#" class="nav-link" data-page="gallery.html">GALLERY</a></li>
-      <li><a href="#" class="nav-link" data-page="views.html">360 VIEWS</a></li>
-      <li><a href="#" class="nav-link" data-page="travel.html">GUIAS VIAJES</a></li>
-      <li><a href="#" class="nav-link" data-page="about.html">ABOUT US</a></li>
-    </ul>
-  </nav>
-  <!--Navigation Bar-->
+  <div class="noise">
+    <!--Navigation Bar-->
+    <div class="logo">
+      <h1>VIEWS</h1>
+    </div>
+    <span id="close"><img style="width: 25px;" src="http://www.pvhc.net/img5/onbbqnqzkjrtvirmiqnp.png"
+        alt="CLOSE"></span>
+    <span id="menu"><img style="width: 25px;"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR11WXR-a18XfNZknL7S4lu0lLyC4aWZPY4sLd4wNHUNv9So2gd"
+        alt="MENU"></span>
+    <nav>
+      <ul>
+        <li>
+          <!-- Decorative search box -->
+          <input type="text" placeholder="Buscar..." style="padding: 5px; margin: 5px; font-size: 16px;">
+        </li>
+        <li><a href="#" class="nav-link" data-page="inicio.html">INICIO</a></li>
+        <li><a href="#" class="nav-link" data-page="gallery.html">GALLERY</a></li>
+        <li><a href="#" class="nav-link" data-page="views.html">360 VIEWS</a></li>
+        <li><a href="#" class="nav-link" data-page="travel.html">GUIAS VIAJES</a></li>
+        <li><a href="#" class="nav-link" data-page="about.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+    <!--Navigation Bar-->
 
-  <div id="main-content"></div>
+    <div id="main-content"></div>
 
-  <footer>
-    <p>Made by: Jaume Casamitjana, Pol Garcia, Jordi Herrera</p>
-    <a>--  --  --  -- --</a>
-    <a href="https://github.com/Atsirgas/Ipo_Final">GITHUB</a>  
-  </footer>
-  
-  <!-- Script load -->
-  <script>
-    $(document).ready(function(){
+    <footer>
+      <p>Made by: Jaume Casamitjana, Pol Garcia, Jordi Herrera</p>
+      <a>-- -- -- -- --</a>
+      <a href="https://github.com/Atsirgas/Ipo_Final">GITHUB</a>
+    </footer>
+
+    <!-- Script load -->
+    <script>
+      $(document).ready(function () {
         // Load la pagina inicio.html por defecto
-        $("#main-content").load("inicio.html");  
-
-        $(".nav-link").click(function(e) {
-            e.preventDefault();
-            var page = $(this).data("page");  // Get el path de la pagina clicada
-            $("#main-content").load(page, function() {
-                if (page === "gallery.html") {
-                    initializeGallery();  // Llama a la función de inicialización
-                }
-            });  // Carga la pag clicada
+        $("#main-content").load("inicio.html");
+    
+        $(".nav-link").click(function (e) {
+          e.preventDefault();
+          
+          // Remove la clase active de todos los enlaces
+          $(".nav-link").removeClass("active");
+          
+          // Add la clase active al enlace clicado
+          $(this).addClass("active");
+    
+          var page = $(this).data("page");  // Get el path de la pagina clicada
+          $("#main-content").load(page, function () {
+            if (page === "gallery.html") {
+              initializeGallery();  // Llama a la función de inicialización
+            }
+          });  // Carga la pag clicada
         });
-    });
-</script>
+      });
+    </script>
+    
 
-
+  </div>
 </body>
+
 </html>
